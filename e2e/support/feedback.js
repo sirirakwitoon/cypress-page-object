@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
-import env from "../../configs/env-dev.config.json";
-import CommonKeyword from "../../integration/keyword/CommonKeyword";
-class HomePage {
+import CommonKeyword from '../cypress/home-page/commonKeyword'
+
+class FeedbackPage {
   expectCorrectUrl() {
     CommonKeyword.verifyContainRedirectUrl('http://zero.webappsecurity.com/index.html');
   }
@@ -9,17 +9,13 @@ class HomePage {
   expectContainPageTitle() {
     CommonKeyword.verifyElementContainText(
       "",
-      "Zero Bank"
+      ""
     );
   }
   chooseOnlineBanking() {
     CommonKeyword.verifyElementIsVisible('');
     CommonKeyword.clickText();
   }
-  chooseFeedback() {
-    CommonKeyword.verifyElementIsVisible('');
-    CommonKeyword.clickText();
-  }
 }
 
-export default HomePage;
+export default FeedbackPage;

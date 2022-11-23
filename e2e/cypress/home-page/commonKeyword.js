@@ -1,5 +1,3 @@
-import env from "../../configs/env-dev.config.json";
-import { Before } from "cypress-cucumber-preprocessor/steps";
 
 /* eslint-disable no-undef */
 beforeEach(() => {

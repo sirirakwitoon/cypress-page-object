@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
-import FeedbackPage from "../../../e2e/support/feedback";
+import FeedbackPage from "../../support/feedback";
 import HomePage from "../../support/home-page";
 import OnlineBankingPage from "../../support/online-banking";
 
@@ -22,8 +22,8 @@ Then("The system able to show online banking page", () => {
     onlineBankingPage.expectContainPageTitle()
 })
 When("User select feedback menu", () => {
-     homePage.chooseFeedback()
-     feedbackPage.expectCorrectUrl()
+    homePage.chooseFeedback()
+    feedbackPage.expectCorrectUrl()
 })
 Then("The system able to show feedback page", () => {
 

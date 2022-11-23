@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
-import env from "../../configs/env-dev.config.json";
-import CommonKeyword from "../../integration/keyword/CommonKeyword";
+import CommonKeyword from '../cypress/home-page/commonKeyword'
+
 class OnlineBankingPage {
   expectCorrectUrl() {
     CommonKeyword.verifyContainRedirectUrl('http://zero.webappsecurity.com/online-banking.html');
