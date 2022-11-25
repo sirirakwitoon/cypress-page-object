@@ -3,13 +3,13 @@ import CommonKeyword from '../cypress/home-page/commonKeyword'
 
 class FeedbackPage {
   expectCorrectUrl() {
-    CommonKeyword.verifyContainRedirectUrl('http://zero.webappsecurity.com/index.html');
+    CommonKeyword.verifyContainRedirectUrl('feedback.html','http://zero.webappsecurity.com/feedback.html');
   }
 
   expectContainPageTitle() {
     CommonKeyword.verifyElementContainText(
-      "",
-      ""
+      "#feedback-title",
+      "Feedback"
     );
   }
   chooseOnlineBanking() {

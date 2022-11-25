@@ -2,23 +2,25 @@
 import CommonKeyword from '../cypress/home-page/commonKeyword'
 
 class HomePage {
+  visitToWebsite() {
+    CommonKeyword.visitToWebsite('http://zero.webappsecurity.com/index.html');
+  }
+  
   expectCorrectUrl() {
-    CommonKeyword.verifyContainRedirectUrl('http://zero.webappsecurity.com/index.html');
+    CommonKeyword.verifyContainRedirectUrl("index.html",'http://zero.webappsecurity.com/index.html');
   }
 
   expectContainPageTitle() {
     CommonKeyword.verifyElementContainText(
-      "",
+      ".brand",
       "Zero Bank"
     );
   }
   chooseOnlineBanking() {
-    CommonKeyword.verifyElementIsVisible('');
-    CommonKeyword.clickText();
+    CommonKeyword.click('#onlineBankingMenu')
   }
   chooseFeedback() {
-    CommonKeyword.verifyElementIsVisible('');
-    CommonKeyword.clickText();
+    CommonKeyword.click('#feedback');
   }
 }
 

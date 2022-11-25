@@ -8,6 +8,10 @@ beforeEach(() => {
 });
 
 class CommonKeyword {
+
+  static visitToWebsite(url){
+    cy.visit(url)
+  }
   static input(selector, text) {
     cy.get(selector).click({ force: true }).type(text);
   }
@@ -73,6 +77,9 @@ class CommonKeyword {
 
   static verifyElementContainText(selector, text) {
     cy.get(selector).invoke("text").should("contain", text);
+  }
+  static verifyElementText(selector, text) {
+    cy.get(selector).contains(text)
   }
 
   static verifyElementContainTextValue(selector, text) {
